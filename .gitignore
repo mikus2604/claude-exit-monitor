@@ -1,0 +1,23 @@
+# Log files
+logs/
+*.log
+*.csv
+
+# PID files
+*.pid
+/var/run/claude-monitor-daemon.pid
+
+# Temporary files
+*.tmp
+*.old
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

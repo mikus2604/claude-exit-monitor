@@ -1,0 +1,30 @@
+[Unit]
+Description=Claude Code Monitor Daemon
+Documentation=file:///root/Hannah-ai-codex/scripts/MONITORING.md
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/Hannah-ai-codex
+ExecStart=/root/Hannah-ai-codex/scripts/claude-monitor-daemon.sh start
+ExecStop=/root/Hannah-ai-codex/scripts/claude-monitor-daemon.sh stop
+Restart=on-failure
+RestartSec=10
+# Also restart if killed by signal (except normal stop/start commands)
+KillMode=mixed
+
+# Resource limits (keep it lightweight)
+MemoryLimit=50M
+CPUQuota=5%
+
+# Logging
+StandardOutput=append:/root/Hannah-ai-codex/logs/claude-monitor/systemd.log
+StandardError=append:/root/Hannah-ai-codex/logs/claude-monitor/systemd-error.log
+
+# Security
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
