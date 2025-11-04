@@ -41,4 +41,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disk warning: 90%
 - OOM killer detection: Active
 
-[1.0.0]: https://github.com/yourusername/claude-exit-monitor/releases/tag/v1.0.0
+[1.0.0]: https://github.com/mikus2604/claude-exit-monitor/releases/tag/v1.0.0

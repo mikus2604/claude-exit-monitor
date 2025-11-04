@@ -37,7 +37,7 @@ Perfect for debugging crashes, OOM kills, and mysterious process exits.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/claude-exit-monitor.git
+git clone https://github.com/mikus2604/claude-exit-monitor.git
 cd claude-exit-monitor
 
 # Install as a systemd service (requires root)
